@@ -58,3 +58,6 @@ This is class variable {type(MyName.total_names)}: from class {MyName.total_name
 {"<*>"*20}""")
 
 print(f"We are done. We create {me.total_names} names! ??? Why {MyName.total_names}?")
+
+new_message = "Я стомився :("
+print(f"Нове привітання: {MyName.say_hello(new_message)}")

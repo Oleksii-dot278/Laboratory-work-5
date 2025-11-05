@@ -15,3 +15,11 @@ Inline-style:
 ![alt text](https://github.com/Oleksii-dot278/Laboratory-work-5/blob/main/%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-11-03%20214749.png)
 
 
+### Завдання 5:
+
+#### 1. Тому що коли я передаю значення None, щоб створити обє'кт з іменем Anonymous, щоб він також існував без імені, тобто, в цьому випадку класи підходять найкраще (я не знаю як це ще пояснити)
+
+#### 2. Для того щоб змінити текст при привітані, я використав цей код:
+
+Inline-style:
+![alt text](https://github.com/Oleksii-dot278/Laboratory-work-5/blob/main/%D0%97%D0%BD%D1%96%D0%BC%D0%BE%D0%BA%20%D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-11-05%20221009.png)
