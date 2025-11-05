@@ -3,53 +3,61 @@ class MyName:
     """
     total_names = 0 #Class Variable
 
-    def __init__(self, name=None) -> None:
-        """Ініціалізація класу
-        """
-        self.name = name if name is not None else self.anonymous_user().name #Class attributes / Instance variables
+    def __init__(self, name=None, domain="itcollege.lviv.ua") -> None:
+ 
+        self.name = (name if name is not None else self.anonymous_user().name).capitalize()
+        self.domain = domain  
         MyName.total_names += 1 #modify class variable
         self.my_id = self.total_names
 
     @property
     def whoami(self) -> str: 
-        """Class property
-        return: повертаємо імя 
-        """
+
         return f"My name is {self.name}"
     
     @property
+    def name_length(self) -> int:
+        return len(self.name)
+    
+    @property
     def my_email(self) -> str:
-        """Class property
-        return: повертаємо емейл
-        """
+ 
         return self.create_email()
     
     def create_email(self) -> str:
-        """Instance method
-        """
-        return f"{self.name}@itcollege.lviv.ua"
+
+        return f"{self.name}@{self.domain}"
 
     @classmethod
     def anonymous_user(cls):
-        """Classs method
-        """
+
         return cls("Anonymous")
     
     @staticmethod
     def say_hello(message="Hello to everyone!") -> str:
-        """Static method
-        """
+
         return f"You say: {message}"
+    
+    @property
+    def full_name(self) -> str:
+        
+        return f"User #{self.my_id}: {self.name} ({self.my_email})"
+    
+
+def save_to_file(self, filename="users.txt") -> None:
+    with open(filename, "a", encoding="utf-8") as file:
+        file.write(self.full_name + "\n")
 
 
 print("Розпочинаємо створювати обєкти!")
 
-names = ("Bohdan", "Marta", None)
+names = ("bohdan", "marta", None)
 all_names = {name: MyName(name) for name in names}
 
 for name, me in all_names.items():
     print(f"""{">*<"*20}
 This is object: {me} 
+print(f"Length of name: {me.name_length} letters")
 This is object attribute: {me.name} / {me.my_id}
 This is {type(MyName.whoami)}: {me.whoami} / {me.my_email}
 This is {type(me.create_email)} call: {me.create_email()}
